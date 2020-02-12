@@ -59,7 +59,6 @@ class AppointmentController {
      * check for post dates
      */
     const hourStart = startOfHour(parseISO(date));
-    console.log(hourStart);
 
     if (isBefore(hourStart, new Date())) {
       return res.status(400).json({ error: 'Post dates are not permited' });
